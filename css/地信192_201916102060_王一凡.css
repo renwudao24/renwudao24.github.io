@@ -1,0 +1,225 @@
+    	html, body{
+    		border: none;
+			padding: 0;
+			margin: 0;
+			font-size: 14px;
+			font-family: "黑体";				
+			}
+		#top{
+		    background-color: #CCCC66;
+			background-size: 100%,100%;
+			position: absolute;
+			width: 100%;
+			height: auto;	
+			top: 0rem;
+            text-align: center;	
+            z-index: 12;			
+            }
+        .btn-primary{
+        	background-color: #CCCC66;
+        	
+        }
+
+        #display-yes{
+			position:absolute;
+			top:150px;
+			right: 0rem;
+			z-index:2001;  
+			}
+        #display-no{
+        	position:absolute;
+        	top:190px;
+        	right: 0rem;         
+        	z-index:2001;  
+        	}
+        #bottom{
+			position: absolute;
+        	width: 100%; 
+        	height: 5%;
+        	bottom:0rem;
+        	margin:0;
+        	background-color: #CCCC66;
+        	text-align: center;  
+        	background-size: 100% 100%;      	
+        	}
+        #dian,#xian,#mian,#mian1,#clear,#control1,#control2,#zoom-in,#zoom-out,#tingzhi{
+        	top: 69px;
+        	z-index: 2006;
+        	position: absolute;
+        	float: left;
+        	}
+        #zoom-in{
+        	left: 15%;
+        }
+        #zoom-out
+        {
+        	left: 23%;
+        }
+        #control1{
+        	left: 30%;
+        	}
+        #dian{
+        	left: 40%;
+        	}
+        #xian{
+        	left: 47%;
+        	}
+        #mian1{
+        	left: 54%;
+        }
+        #mian{
+        	left: 61%
+        	}       
+        #control2{
+        	left: 71%;
+        	}
+        #tingzhi{
+        	left: 78%;
+        	}
+        #clear{
+        	left: 87%;
+        	}
+        
+        #map{
+        	position: absolute;
+        	margin-top: 0;
+        	top: 69.2px;
+        	height: 620px;
+        	width:62%;
+        	float:left;
+        	z-index: -10;
+          	left: 0;
+          	}
+        #map1{
+        	position: absolute;
+        	margin-top: 0;
+        	top: 69.2px;
+        	height: 620px;
+        	width:38%;
+        	float:right;
+        	z-index: -10;
+        	right: 0;
+        	}
+         /* 鼠标位置控件层样式设置 */
+        #mouse-position{
+            float:left;
+            position:absolute;
+            bottom:0;
+            right: 80px;
+            text-align: right;
+            width: 500px;
+            height:40px;         
+            z-index:2000;   /*在地图容器中的层，要设置z-index的值让其显示在地图上层*/
+        }
+        /* 鼠标位置信息自定义样式设置 */
+        .custom-mouse-position{
+            color:Red;
+            font-size:30px;
+            font-family:"微软雅黑";
+        }
+        /**
+          * 缩放滑块控件ZoomSlider的样式，放置到缩放按钮之间实现导航条功能
+         */			
+			#map .ol-zoom .ol-zoom-out {
+				margin-top: 204px;
+			}			
+			#map .ol-zoomslider {
+				background-color: transparent;
+				top: 2.3em;
+			}			
+			#map .ol-touch .ol-zoom .ol-zoom-out {
+				margin-top: 212px;
+			}			
+			#map .ol-touch .ol-zoomslider {
+				top: 2.75em;
+			}			
+			#map .ol-zoom-in.ol-has-tooltip:hover [role=tooltip],
+			#map .ol-zoom-in.ol-has-tooltip:focus [role=tooltip] {
+				top: 3px;
+			}			
+			#map .ol-zoom-out.ol-has-tooltip:hover [role=tooltip],
+			#map .ol-zoom-out.ol-has-tooltip:focus [role=tooltip] {
+				top: 2px;
+			}
+			/**
+             * 缩放控件zoomToExtent的样式设置
+             */			
+			#map .ol-zoom-extent {
+				top: 280px;
+			}
+        /*=S 自定义鹰眼样式 */ 
+        #map.ol-custom-overviewmap,.ol-custom-overviewmap.ol-uncollapsible {
+            bottom: 150px;
+            left: 150px;
+            right: 160px;/* 右侧显示 */
+            top: -;  /* 顶部显示 */
+           }   
+         /* 鹰眼控件展开时控件外框的样式 */
+        #map.ol-custom-overviewmap:not(.ol-collapsed)  {
+            border: 1px solid black;
+            }
+         /* 鹰眼控件中地图容器样式 */
+        #map.ol-custom-overviewmap .ol-overviewmap-map {
+            border: none;
+            width: 300px;
+            }
+        /* 鹰眼控件中显示当前窗口中主图区域的边框 */
+        map.ol-custom-overviewmap .ol-overviewmap-box {
+            border: 2px solid red;
+            }
+        /* 鹰眼控件展开时其控件按钮图标的样式 */
+        map.ol-custom-overviewmap:not(.ol-collapsed) button{
+            bottom: auto;
+            left: auto;
+            right: 1px;
+            top: 1px;
+            }
+            /* 图层控件层样式设置 */
+        .layerControl{
+            position:absolute;
+            bottom:5px;
+            min-width:200px;
+            max-height:200px; 
+            right:5px;  
+            top:100px;    
+            z-index:2001;   /*在地图容器中的层，要设置z-index的值让其显示在地图上层*/
+            color:#ffffff;
+            background-color:#4c4e5a;
+            border-width: 10px; /*边缘的宽度*/
+            border-radius: 10px;    /*圆角的大小 */ 
+            border-color: #000 #000 #000 #000;  /*边框颜色*/
+           }
+        .layerControl .title{
+            font-weight:bold;
+            font-size:15px;
+            margin:10px;
+            }
+        .layerTree li{
+            list-style:none; 
+            margin:5px 10px; 
+             }
+        /*样式选择*/
+        #yangshiboxcontrol{
+        	right: 60%;
+		    position:absolute;
+		    min-width:200px;
+		    max-height:600px;
+		    top:200px;
+		    z-index:2001;   /*在地图容器中的层，要设置z-index的值让其显示在地图上层*/
+		    color:#ffffff;
+		    background-color:#4c4e5a;
+		    border-width: 10px; /*边缘的宽度*/
+		    border-radius: 10px;    /*圆角的大小 */
+		    border-color: #000 #000 #000 #000;  /*边框颜色*/
+		               list-style:none; 
+            margin:5px 10px; 
+		   } 
+		#yangshiboxcontrol p,select,button,option,input{
+            margin:5px 10px; 
+             } 
+        #yangshiboxcontrol button,input,select,option{
+        	color: #000000;
+        }
+        #colorpane button{
+        	color: #000000;
+        }          
